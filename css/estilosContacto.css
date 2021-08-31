@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    
+    /*font-family: Arial, Helvetica, sans-serif;*/
+}
+
+/*HEADER*/
+/*de google*/
+html{
+    font-family: 'Zen Loop', cursive;
+}
+/*de google*/
+header div h1 {
+    padding: 26.5px 0;
+    /*display: inline-block;*/
+    
+    text-align: center;
+    background-color:lightgray;
+
+    font-style: italic;
+    font-weight: bold;
+    font-size: 50px;
+
+    text-transform: uppercase;
+    line-height: 60px;
+    
+}
+
+/*usando flex*/
+ #idformContacto{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+} 
+/*fin de usando flex*/
+.boton{
+    background: #fff; /* color de fondo */
+  color: #4741d7; /* color de fuente */
+  border: 2px solid #4741d7; /* tamaño y color de borde */
+  padding: 16px 20px;
+  border-radius: 3px; /* redondear bordes */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 1.6rem;
+}
+
+#txtComentarios
+{
+    width: 100%;
+}
+
+.inputContact{
+    font-size: 1.5rem;
+    line-height: 1.33333;
+    font-weight: 400;
+    color: rgba(0,0,0,0.9);
+    position: relative;
+    z-index: 1;
+    height: 16px;
+    padding: 28px 12px 6px;
+    border-radius: 4px ;
+}
+
+.inputContactCombo{
+    font-size: 1.5rem;
+    line-height: 1.33333;
+    font-weight: 400;
+    color: rgba(0,0,0,0.9);
+    position: relative;
+    z-index: 1;
+    height: 25px;
+    width: 350px;
+    padding: 28px 12px 6px;
+    border-radius: 4px ;
+}
+
+.inputContactMultiText{
+    font-size: 1.5rem;
+    line-height: 1.33333;
+    font-weight: 400;
+    color: rgba(0,0,0,0.9);
+    position: relative;
+    z-index: 1;
+    height: 200px;
+    padding: 28px 12px 6px;
+    border-radius: 4px ;
+}
+.boton:hover{
+    background-color: rgb(98, 139, 228);
+}
+/* #idformContacto .inputContact
+{
+    
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top:60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: lightskyblue;
+}
+ */

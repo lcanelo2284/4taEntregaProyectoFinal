@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+}
+
+/*HEADER*/
+/*de google*/
+html{
+    font-family: 'Zen Loop', cursive;
+}
+/*de google*/
+header div h1 {
+    padding: 26.5px 0;
+    /*display: inline-block;*/
+    
+    text-align: center;
+    background-color: khaki;
+
+    font-style: italic;
+    font-weight: bold;
+    font-size: 70px;
+
+    text-transform: uppercase;
+    line-height: 60px;
+    
+}
+
+header #logoOsoCara  {
+    /*padding: 36.5px 0;*/
+    /*text-align: center;*/
+    display: inline-block;
+    background-color:aquamarine;
+}
+
+header section div nav ul{
+    text-align: center;
+    background-color:burlywood
+}
+
+header section div nav ul  {
+    padding: 26.5px 0;
+    width: 100%;
+    list-style-type: none;
+    
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /*align-items: center;*/
+
+    /*display: inline-block;*/
+    /* text-align:center;
+    position: relative; */
+    
+    
+    /*text-decoration: none;*/
+    
+    /*text-align: center;*/
+    /*background-color:burlywood*/
+}
+
+header section div nav ul li a:hover{
+    background-color:lightskyblue;
+    color: white;
+    padding: 16px;
+}
+
+a {
+	text-decoration: none;
+	padding: 4px;
+}
+
+header section div nav .listNav li a{
+    text-decoration: none;
+    color: green;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* main section div{
+    display: flex;
+    flex-direction: row;
+    
+    justify-items: center;
+} */
+main section #misionVision h4{
+    font-family:'Lora', serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+main section #quienesSomos h4{
+    font-family:'Lora', serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+#tablaServicios td ol  {
+    list-style-position: inside;
+    
+}
+
+#tablaServicios td ol li{
+    text-align:left;
+    /*background-color: green;*/
+}
+
+#tablaServicios {
+    /*CENTRA LA TABLA*/
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+#tablaServicios .titulos{
+background-color: cornflowerblue;
+font-size: 20px;
+font-style: oblique;
+}
+
+#tablaServicios caption{
+    font-size: 30px;
+    /*font-style: italic;*/
+    font-family:'Roboto', sans-serif;
+    
+}
+
+#tablaServicios tr .celdasTablaServ{
+    text-align:center;
+    font-family: 'Bebas Neue', cursive;
+}
+
+#tablaServicios tr .celdasListTablaServ li{
+    
+    text-align:justify;
+    font-family: 'Bebas Neue', cursive;
+    
+}
+/* header .divHeader{
+    /*height: 150px;*/
+    /*width: 100%;*/
+  /*  height: 90%;
+} 
+
+/*MAIN*/
+#imagen1{
+    padding-top: 20px;
+    height: 300px;
+    background-image: url("../img/conchas1.jpg");
+    background-size: cover;
+}
+
+ #imagen1:hover{
+    /*transform: skew(45deg, 25deg);*/
+    transform:scale(1.2);
+} 
+
+#imagen2{
+    padding-top: 20px;
+    height: 300px;
+    background-image: url("../img/conchas2.jpeg");
+    background-size: cover;
+}
+#imagen2:hover{
+    /*transform: skew(45deg, 25deg);*/
+    transform:scale(1.2);
+} 
+
+#imagen3{
+    padding-top: 20px;
+    height: 300px;
+    background-image: url("../img/caballa1.jpg");
+    background-size: cover;
+}
+#imagen3:hover{
+    /*transform: skew(45deg, 25deg);*/
+    transform:scale(1.2);
+} 
+#imagen4{
+    padding-top: 20px;
+    height: 300px;
+    background-image: url("../img/ovas2.jpg");
+    background-size: cover;
+}
+#imagen4:hover{
+    /*transform: skew(45deg, 25deg);*/
+    transform:scale(1.2);
+} 
+/* #inicio:hover{
+    transform: skew(50deg, 25deg);
+} */
+
+  /*#misionVision{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+} */ 
+
+
+
+/*quienes somos*/
+
+/* #quienesSomos{
+    
+    display: flex;
+    flex-direction:row;
+    
+    justify-content: center;
+    
+}  */
+
+/* #quienesSomos .quienSom{
+    
+    padding: 60px 45px; 
+    height: 60%;
+    width: 30%;
+    text-align: justify;   
+    background-color: lightblue;
+   
+    font-style: italic;
+    font-weight: bold;
+    font-size: 100%;
+}  */
+
+/* #misionVision .quienSom{
+    
+    padding: 65px 45px; 
+    height: 60%;
+    width: 30%;
+    text-align: justify;   
+    background-color: lightblue;
+   
+    font-style: italic;
+    font-weight: bold;
+    font-size: 100%;
+}  */
+
+
+/*usando grid*/
+#imagenes{
+    
+    
+    display:grid;
+    grid-template-areas: 
+     "imagen1 imagen2 imagen3 imagen4";
+     grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 500px; 
+    grid-column-gap: 10px;
+    /*grid-row-gap: 10px;*/
+    /* column-gap: 100px;
+    row-gap: 30px;
+    align-content: center;
+    align-items: center; */
+    
+}
+
+#imagen1{
+    grid-area: imagen1;
+    /*background-color: lightskyblue;*/
+    
+}
+
+#imagen2{
+    grid-area: imagen2;
+    /*background-color: lightskyblue;*/
+    
+}
+
+#imagen3{
+    grid-area: imagen3;
+    /*background-color: lightskyblue;*/
+    
+}
+
+#imagen4{
+    grid-area: imagen4;
+    /*background-color: lightskyblue;*/
+    
+}
+/*fin de usando grid*/
+
+/*usando mobile first*/
+@media screen and (max-width: 320px) {
+    #misionVision {
+      display: flex;
+      flex-direction: column;
+      
+    }
+  }
+/*fin de usando mobile first*/
+
+/*fin de quienes somos*/
+
+/*  #misionVision .misVis{
+    
+    padding: 60px 45px; 
+    height: 60%;
+    width: 30%;
+    
+    background-color: indianred;
+    display: inline-table;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 100%;
+}  */
+
+
+/* #misionVision .misVis{
+    
+    padding: 60px 45px; 
+    height: 60%;
+    width: 30%;
+    text-align: justify;   
+    background-color: indianred;
+    
+    font-style: italic;
+    font-weight: bold;
+    font-size: 100%;
+} */
+
+/* #misionVision .misVis2{
+    
+    padding: 60px 45px; 
+    height: 60%;
+    width: 30%;
+    text-align: justify;   
+    background-color: blue;
+    
+    font-style: italic;
+    font-weight: bold;
+    font-size: 100%;
+} */
+
+
+/*FOOTER*/
+#idsectionFooter .contacto {
+    text-align:left;
+    display: inline-block;
+    /*background-color:red;*/
+}
+
+#idsectionFooter .mediosPago {
+   
+    float: right;
+    text-align: left;
+    /*background-color: blue;*/
+    /* padding: 10px 45px;  */
+    height: 60%;
+    width: 30%;
+    
+}
+
+footer #idsectionFooter .contacto h5 {
+    font-family:'Lora', serif;
+    text-align: left;
+    font-size: 15px;
+}
+
+footer #idsectionFooter .mediosPago h5 {
+    font-family:'Lora', serif;
+    text-align: left;
+    font-size: 15px;
+    
+}
+
+footer{
+    background-color:burlywood
+}
+
+/*FIN DE FOOTER*/
+

@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+}
+
+/*HEADER*/
+/*de google*/
+html{
+    font-family: 'Zen Loop', cursive;
+}
+/*de google*/
+header div h1 {
+    padding: 26.5px 0;
+    /*display: inline-block;*/
+    
+    text-align: center;
+    background-color: khaki;
+
+    font-style: italic;
+    font-weight: bold;
+    font-size: 70px;
+
+    text-transform: uppercase;
+    line-height: 60px;
+    
+}
+
+header #logoOsoCara  {
+    /*padding: 36.5px 0;*/
+    /*text-align: center;*/
+    display: inline-block;
+    background-color:aquamarine;
+}
+
+header section div nav ul{
+    text-align: center;
+    background-color:burlywood
+}
+
+header section div nav ul  {
+    padding: 26.5px 0;
+    width: 100%;
+    list-style-type: none;
+    
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /*align-items: center;*/
+
+    /*display: inline-block;*/
+    /* text-align:center;
+    position: relative; */
+    
+    
+    /*text-decoration: none;*/
+    
+    /*text-align: center;*/
+    /*background-color:burlywood*/
+}
+
+header section div nav ul li a:hover{
+    background-color:lightskyblue;
+    color: white;
+    padding: 16px;
+}
+
+a {
+	text-decoration: none;
+	padding: 4px;
+}
+
+/* header section div nav .listNav li a{
+    text-decoration: none !important;
+    color: green !important;
+    font-style: italic !important;
+    font-weight: bold !important;
+    font-size: 30px !important;
+} */
+
+header section div nav  li a{
+    text-decoration: none !important;
+    color: green !important;
+    font-style: italic !important;
+    font-weight: bold !important;
+    font-size: 30px !important;
+}
+
+main section #misionVision h4{
+    font-family:'Lora', serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+main section #quienesSomos h4{
+    font-family:'Lora', serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+#tablaServicios td ol  {
+    list-style-position: inside;
+    
+}
+
+#tablaServicios td ol li{
+    text-align:left;
+    /*background-color: green;*/
+}
+
+#tablaServicios {
+    /*CENTRA LA TABLA*/
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+#tablaServicios .titulos{
+background-color: cornflowerblue;
+font-size: 20px;
+font-style: oblique;
+}
+
+#tablaServicios caption{
+    font-size: 30px;
+    /*font-style: italic;*/
+    font-family:'Roboto', sans-serif;
+    
+}
+
+#tablaServicios tr .celdasTablaServ{
+    text-align:center;
+    font-family: 'Bebas Neue', cursive;
+}
+
+#tablaServicios tr .celdasListTablaServ li{
+    
+    text-align:justify;
+    font-family: 'Bebas Neue', cursive;
+    
+}
+/* header .divHeader{
+    /*height: 150px;*/
+    /*width: 100%;*/
+  /*  height: 90%;
+} 
+
+/*MAIN*/
+#inicio{
+    padding-top: 20px;
+    height: 500px;
+    background-image: url("../img/pesca.png");
+    background-size: cover;
+}
+
+/* #inicio:hover{
+    transform: skew(50deg, 25deg);
+} */
+
+  /*#misionVision{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+} */ 
+
+
+
+/*quienes somos*/
+
+/* #quienesSomos{
+    
+    display: flex;
+    flex-direction:row;
+    
+    justify-content: center;
+    
+}  */
+
+/* #quienesSomos .quienSom{
+    
+    padding: 60px 45px; 
+    height: 60%;
+    width: 30%;
+    text-align: justify;   
+    background-color: lightblue;
+   
+    font-style: italic;
+    font-weight: bold;
+    font-size: 100%;
+}  */
+
+/* #misionVision .quienSom{
+    
+    padding: 65px 45px; 
+    height: 60%;
+    width: 30%;
+    text-align: justify;   
+    background-color: lightblue;
+   
+    font-style: italic;
+    font-weight: bold;
+    font-size: 100%;
+}  */
+
+
+/*usando grid*/
+#misionVision{
+    
+    
+    display:grid;
+    grid-template-areas: 
+     "qS mM"
+     "qS mV";
+     grid-template-columns: 40% auto;
+    grid-template-rows: 100px 100px; 
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    /* column-gap: 100px;
+    row-gap: 30px;
+    align-content: center;
+    align-items: center; */
+    
+}
+
+#qS{
+    grid-area: qS;
+    /*background-color: lightskyblue;*/
+    background: linear-gradient(to bottom, #c5deea 0%,#8abbd7 23%,#066dab 100%);
+}
+
+#mM{
+    grid-area: mM;
+    /*background-color: blue;*/
+    background: linear-gradient(to right, #f3c5bd 0%,#e86c57 50%,#f7e704 51%,#ff6600 75%,#c72200 100%);
+}
+
+#mV{
+    grid-area: mV;
+    /*background-color: indianred;*/
+    background: radial-gradient(ellipse at center, #356aa0 47%,#49d3d8 79%);
+}
+/*fin de usando grid*/
+
+/*usando mobile first*/
+@media screen and (max-width: 320px) {
+    #misionVision {
+      display: flex;
+      flex-direction: column;
+      
+    }
+  }
+/*fin de usando mobile first*/
+
+/*fin de quienes somos*/
+
+/*  #misionVision .misVis{
+    
+    padding: 60px 45px; 
+    height: 60%;
+    width: 30%;
+    
+    background-color: indianred;
+    display: inline-table;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 100%;
+}  */
+
+
+/* #misionVision .misVis{
+    
+    padding: 60px 45px; 
+    height: 60%;
+    width: 30%;
+    text-align: justify;   
+    background-color: indianred;
+    
+    font-style: italic;
+    font-weight: bold;
+    font-size: 100%;
+} */
+
+/* #misionVision .misVis2{
+    
+    padding: 60px 45px; 
+    height: 60%;
+    width: 30%;
+    text-align: justify;   
+    background-color: blue;
+    
+    font-style: italic;
+    font-weight: bold;
+    font-size: 100%;
+} */
+
+
+/*FOOTER*/
+#idsectionFooter .contacto {
+    text-align:left;
+    display: inline-block;
+    /*background-color:red;*/
+}
+
+#idsectionFooter .mediosPago {
+   
+    float: right;
+    text-align: left;
+    /*background-color: blue;*/
+    /* padding: 10px 45px;  */
+    height: 60%;
+    width: 30%;
+    
+}
+
+footer #idsectionFooter .contacto h5 {
+    font-family:'Lora', serif;
+    text-align: left;
+    font-size: 15px;
+}
+
+footer #idsectionFooter .mediosPago h5 {
+    font-family:'Lora', serif;
+    text-align: left;
+    font-size: 15px;
+    
+}
+
+footer{
+    background-color:burlywood
+}
+
+/*FIN DE FOOTER*/
+

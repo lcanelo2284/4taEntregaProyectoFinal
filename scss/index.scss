@@ -1,0 +1,432 @@
+
+/*de google*/
+html{
+    font-family: 'Zen Loop', cursive;
+}
+/*de google*/
+
+div{
+    h2{
+        color: red;
+    }
+
+   
+}
+
+/*index*/
+
+.sectionHeader
+{
+    /* display: flex;
+    display: row; */
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.sectionHeader_H3{
+    display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color:#81ba50;
+}
+
+.telH3{
+    text-align: center;
+}
+/* .sectionHeader_H3
+{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+} */
+
+.divTitulo{
+    padding: 25.5px 0 !important;
+    /*display: inline-block;*/
+    
+    text-align: center !important;
+    background-color: white !important;
+    color: darkblue !important;
+
+    font-style: italic !important;
+    font-weight: bold !important;
+    /*font-size: 70px;*/
+
+    text-transform: uppercase !important;
+    line-height: 60px !important;
+
+    &__tituloH1{
+        font-size: 70px !important;
+    }
+}
+
+.navegacion
+{ /*text-align: center ;*/
+    background-color:whitesmoke;
+
+    padding: 26.5px 0 ;
+    width: 100% ;
+    list-style-type: none ;
+    
+
+     display: flex ;
+    flex-direction: row;
+    justify-content: space-around; 
+
+    &__item{
+    
+        /*text-align: center !important;*/
+       /* background-color:whitesmoke !important;
+
+        padding: 26.5px 0 !important;
+        width: 100% !important;
+        /*list-style-type: none !important;*/
+        
+
+        /*display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-around !important;*/
+
+        text-decoration: none ;
+        color: rgb(114, 113, 113) ;
+        font-style: italic ;
+        font-weight: bold ;
+        font-size: 20px ;
+        
+        /*padding: 4px !important;*/
+
+        &__image
+        {
+            visibility: hidden;
+        }
+    }
+}
+
+.navegacion__item:hover{
+    
+    color: #81ba50 !important;
+    font-weight: bold;
+    .navegacion__item__image
+    {
+        visibility: visible;
+    }
+}
+
+/*media querys*/
+@media screen and (max-width: 320px) {
+    .navegacion {
+      display: flex;
+      flex-direction: column;
+      
+    }
+
+    .quienSomVisMis
+    {
+        display: flex;
+        flex-direction: column;
+        
+      }
+  }
+/*fin de media query*/
+
+/*fotos*/
+.sectionIndex
+{
+    &__imagen1
+    {
+        padding-top: 20px;
+        height: 500px;
+        background-image: url("../img/pesca.png");
+        background-size: cover;
+    }
+} 
+/*fin de fotos */
+.quienSomVisMis
+{
+    @media screen and (max-width: 320px) {
+       
+          display: flex;
+          flex-direction: column;
+          
+        
+      }
+    
+    display:grid;
+    grid-template-areas: 
+     "qS mM"
+     "qS mV";
+     grid-template-columns: 40% auto;
+    grid-template-rows: 100px 100px; 
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+
+    &__quienSom
+    {
+        grid-area: qS;
+    background-color: white;
+    &__h4
+    {
+        color: darkblue;
+    }
+    &__p
+    {
+        text-align: justify;
+    }
+    /*background: linear-gradient(to bottom, #c5deea 0%,#8abbd7 23%,#066dab 100%);*/
+    }
+
+    &__vision
+    {
+        grid-area: mM;
+        background-color: white;
+    /*background-color: blue;*/
+    /*background: linear-gradient(to right, #f3c5bd 0%,#e86c57 50%,#f7e704 51%,#ff6600 75%,#c72200 100%);*/
+    }
+
+    &__mision
+    {
+        grid-area: mV;
+        background-color: white;
+    /*background-color: indianred;*/
+    /*background: radial-gradient(ellipse at center, #356aa0 47%,#49d3d8 79%);*/
+    }
+}
+
+/*fin de index*/
+
+/*quinees somos*/
+
+
+$ruta_imgOrganigrama:"../img/organigrama.png";
+/*$heigth_org:250px;*/
+
+.organizacion{
+    &__organigrama
+    {
+        padding-top: 20px;
+        height: 750px;
+        
+        background-image: url($ruta_imgOrganigrama);
+        background-size:cover;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+$ruta_imgHistoria:"../img/pesca3.jpg";
+.sectionHistoria
+{
+    display:grid;
+    grid-template-areas: 
+     "iddivHistoria idimagenHistoria"
+     "iddivHistoria idimagenHistoria"
+     "iddivHistoria idimagenHistoria";
+    
+     grid-template-columns: 50% auto;
+    grid-template-rows: 100px 100px; 
+    grid-column-gap: 10px;
+    
+    text-align: justify;
+    
+    &__historia
+    {
+        grid-area: iddivHistoria;/*divHistoria;*/
+        background-color: white;
+        
+        &__h4
+        {
+            color:darkblue;
+        }
+    
+    }
+    
+    
+    &__imagenHistoria
+    {
+        padding-top: 20px;
+        height: 500px;
+        /*height:$height_imgH*6 ;*/
+        background-image: url($ruta_imgHistoria);
+        background-size: cover;
+
+        grid-area: idimagenHistoria;
+    }
+}
+
+
+/*fin de quienes somos*/
+
+.sectionFooter
+{
+    background-color:whitesmoke;
+    padding: 10.5px 0 !important;
+    &__contacto
+    {
+        text-align:left;
+        display: inline-block;
+        &__h5
+        {
+            color: darkgrey;
+        }
+        &__p
+        {
+            color: grey;
+        }
+    }
+
+    &__mediosPago
+    {
+        float: right;
+        text-align: left;
+        /*background-color: blue;*/
+        /* padding: 10px 45px;  */
+        /*height: 60%;
+        width: 30%;   */
+        &__h5
+        {
+            color: darkgrey;
+        }
+
+        &__img
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+   
+}
+
+
+/*pagina servicios*/
+.tablaServicios
+{
+    margin: 0 auto;
+    border-collapse: collapse;
+
+    &__titulos
+    {
+        background-color:#81ba50;
+        font-size: 20px;
+        font-style: oblique;
+        color: white !important;
+    }
+
+    &__reg-1
+    {
+        text-align:center;
+        font-family: 'Bebas Neue', cursive;
+        &__lista
+        {
+            text-align:justify;
+            font-family: 'Bebas Neue', cursive;
+        }
+    }
+
+    &__reg-2
+    {
+        text-align:center;
+        font-family: 'Bebas Neue', cursive;
+        &__lista
+        {
+            text-align:justify;
+            font-family: 'Bebas Neue', cursive;
+        }
+    }
+
+    
+}
+
+.prod_padre
+{
+    display: flex;
+    flex-direction: column;
+}
+.prod_hijo
+{
+    display: flex;
+    flex-direction: row;
+    h5{
+    color: darkblue;
+    }
+
+    p
+    {
+        color:#81ba50;
+  
+    }
+
+    &__img
+    {
+        
+        height: auto !important;
+        width: auto !important;
+        max-height: 600px !important;
+        max-width: 600px !important;
+        /*background-size: cover;*/
+    }
+}
+
+.descriProd
+{
+    padding: 26.5px 0 ;
+    width: 100% ;
+    text-align: justify;
+}
+
+/*fin de pagina servicios*/
+
+
+/*pagina contacto*/
+.frmContacto
+{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+.fraseContacto{
+    &__h3
+    {
+        color: darkblue;
+        &__1
+        {
+            color:darkblue;
+        }
+        &__2
+        {
+            color: #81ba50;
+        }
+    }
+}
+
+.inputContact
+{
+    font-size: 1.5rem;
+    line-height: 1.33333;
+    font-weight: 400;
+    color: rgba(0,0,0,0.9);
+    
+    
+    position: relative;
+    z-index: 1;
+    height: 16px;
+    padding: 28px 12px 6px;
+    border-radius: 4px ;
+}
+
+.btn-green:hover
+{
+    background-color: #81ba50 !important;
+}
+/*fin de pagina contacto*/

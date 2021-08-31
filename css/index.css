@@ -1,0 +1,318 @@
+/*de google*/
+html {
+  font-family: "Zen Loop", cursive;
+}
+
+/*de google*/
+div h2 {
+  color: red;
+}
+
+/*index*/
+.sectionHeader {
+  /* display: flex;
+  display: row; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.sectionHeader_H3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #81ba50;
+}
+
+.telH3 {
+  text-align: center;
+}
+
+/* .sectionHeader_H3
+{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+} */
+.divTitulo {
+  padding: 25.5px 0 !important;
+  /*display: inline-block;*/
+  text-align: center !important;
+  background-color: white !important;
+  color: darkblue !important;
+  font-style: italic !important;
+  font-weight: bold !important;
+  /*font-size: 70px;*/
+  text-transform: uppercase !important;
+  line-height: 60px !important;
+}
+.divTitulo__tituloH1 {
+  font-size: 70px !important;
+}
+
+.navegacion {
+  /*text-align: center ;*/
+  background-color: whitesmoke;
+  padding: 26.5px 0;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.navegacion__item {
+  /*text-align: center !important;*/
+  /* background-color:whitesmoke !important;
+
+   padding: 26.5px 0 !important;
+   width: 100% !important;
+   /*list-style-type: none !important;*/
+  /*display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-around !important;*/
+  text-decoration: none;
+  color: #727171;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+  /*padding: 4px !important;*/
+}
+.navegacion__item__image {
+  visibility: hidden;
+}
+
+.navegacion__item:hover {
+  color: #81ba50 !important;
+  font-weight: bold;
+}
+.navegacion__item:hover .navegacion__item__image {
+  visibility: visible;
+}
+
+/*media querys*/
+@media screen and (max-width: 320px) {
+  .navegacion {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .quienSomVisMis {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/*fin de media query*/
+/*fotos*/
+.sectionIndex__imagen1 {
+  padding-top: 20px;
+  height: 500px;
+  background-image: url("../img/pesca.png");
+  background-size: cover;
+}
+
+/*fin de fotos */
+.quienSomVisMis {
+  display: grid;
+  grid-template-areas: "qS mM" "qS mV";
+  grid-template-columns: 40% auto;
+  grid-template-rows: 100px 100px;
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+}
+@media screen and (max-width: 320px) {
+  .quienSomVisMis {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.quienSomVisMis__quienSom {
+  grid-area: qS;
+  background-color: white;
+  /*background: linear-gradient(to bottom, #c5deea 0%,#8abbd7 23%,#066dab 100%);*/
+}
+.quienSomVisMis__quienSom__h4 {
+  color: darkblue;
+}
+.quienSomVisMis__quienSom__p {
+  text-align: justify;
+}
+.quienSomVisMis__vision {
+  grid-area: mM;
+  background-color: white;
+  /*background-color: blue;*/
+  /*background: linear-gradient(to right, #f3c5bd 0%,#e86c57 50%,#f7e704 51%,#ff6600 75%,#c72200 100%);*/
+}
+.quienSomVisMis__mision {
+  grid-area: mV;
+  background-color: white;
+  /*background-color: indianred;*/
+  /*background: radial-gradient(ellipse at center, #356aa0 47%,#49d3d8 79%);*/
+}
+
+/*fin de index*/
+/*quinees somos*/
+/*$heigth_org:250px;*/
+.organizacion__organigrama {
+  padding-top: 20px;
+  height: 750px;
+  background-image: url("../img/organigrama.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sectionHistoria {
+  display: grid;
+  grid-template-areas: "iddivHistoria idimagenHistoria" "iddivHistoria idimagenHistoria" "iddivHistoria idimagenHistoria";
+  grid-template-columns: 50% auto;
+  grid-template-rows: 100px 100px;
+  grid-column-gap: 10px;
+  text-align: justify;
+}
+.sectionHistoria__historia {
+  grid-area: iddivHistoria;
+  /*divHistoria;*/
+  background-color: white;
+}
+.sectionHistoria__historia__h4 {
+  color: darkblue;
+}
+.sectionHistoria__imagenHistoria {
+  padding-top: 20px;
+  height: 500px;
+  /*height:$height_imgH*6 ;*/
+  background-image: url("../img/pesca3.jpg");
+  background-size: cover;
+  grid-area: idimagenHistoria;
+}
+
+/*fin de quienes somos*/
+.sectionFooter {
+  background-color: whitesmoke;
+  padding: 10.5px 0 !important;
+}
+.sectionFooter__contacto {
+  text-align: left;
+  display: inline-block;
+}
+.sectionFooter__contacto__h5 {
+  color: darkgrey;
+}
+.sectionFooter__contacto__p {
+  color: grey;
+}
+.sectionFooter__mediosPago {
+  float: right;
+  text-align: left;
+  /*background-color: blue;*/
+  /* padding: 10px 45px;  */
+  /*height: 60%;
+  width: 30%;   */
+}
+.sectionFooter__mediosPago__h5 {
+  color: darkgrey;
+}
+.sectionFooter__mediosPago__img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/*pagina servicios*/
+.tablaServicios {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.tablaServicios__titulos {
+  background-color: #81ba50;
+  font-size: 20px;
+  font-style: oblique;
+  color: white !important;
+}
+.tablaServicios__reg-1 {
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+}
+.tablaServicios__reg-1__lista {
+  text-align: justify;
+  font-family: "Bebas Neue", cursive;
+}
+.tablaServicios__reg-2 {
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+}
+.tablaServicios__reg-2__lista {
+  text-align: justify;
+  font-family: "Bebas Neue", cursive;
+}
+
+.prod_padre {
+  display: flex;
+  flex-direction: column;
+}
+
+.prod_hijo {
+  display: flex;
+  flex-direction: row;
+}
+.prod_hijo h5 {
+  color: darkblue;
+}
+.prod_hijo p {
+  color: #81ba50;
+}
+.prod_hijo__img {
+  height: auto !important;
+  width: auto !important;
+  max-height: 600px !important;
+  max-width: 600px !important;
+  /*background-size: cover;*/
+}
+
+.descriProd {
+  padding: 26.5px 0;
+  width: 100%;
+  text-align: justify;
+}
+
+/*fin de pagina servicios*/
+/*pagina contacto*/
+.frmContacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fraseContacto__h3 {
+  color: darkblue;
+}
+.fraseContacto__h3__1 {
+  color: darkblue;
+}
+.fraseContacto__h3__2 {
+  color: #81ba50;
+}
+
+.inputContact {
+  font-size: 1.5rem;
+  line-height: 1.33333;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.9);
+  position: relative;
+  z-index: 1;
+  height: 16px;
+  padding: 28px 12px 6px;
+  border-radius: 4px;
+}
+
+.btn-green:hover {
+  background-color: #81ba50 !important;
+}
+
+/*fin de pagina contacto*/
+
+/*# sourceMappingURL=index.css.map */
