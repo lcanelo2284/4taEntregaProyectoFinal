@@ -227,6 +227,13 @@ $ruta_imgOrganigrama:"../img/organigrama.png";
 $ruta_imgHistoria:"../img/qienesSomos.jpg";
 .sectionHistoria
 {
+    @media screen and (max-width: 320px) {
+       
+        display: flex;
+        flex-direction: column;
+        
+      
+    }
     display:grid;
     grid-template-areas: 
      "idimagenHistoria iddivHistoria"
