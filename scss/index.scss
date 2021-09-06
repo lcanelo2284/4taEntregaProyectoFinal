@@ -7,7 +7,7 @@ html{
 
 div{
     h2{
-        color: red;
+        color:darkblue;
     }
 
    
@@ -20,6 +20,7 @@ div{
     /* display: flex;
     display: row; */
     
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -169,6 +170,10 @@ div{
     {
         grid-area: qS;
     background-color: white;
+    
+    /*background: linear-gradient(to bottom, #c5deea 0%,#8abbd7 23%,#066dab 100%);*/
+    }
+    
     &__h4
     {
         color: darkblue;
@@ -176,8 +181,6 @@ div{
     &__p
     {
         text-align: justify;
-    }
-    /*background: linear-gradient(to bottom, #c5deea 0%,#8abbd7 23%,#066dab 100%);*/
     }
 
     &__vision
@@ -221,14 +224,14 @@ $ruta_imgOrganigrama:"../img/organigrama.png";
 }
 
 
-$ruta_imgHistoria:"../img/pesca3.jpg";
+$ruta_imgHistoria:"../img/qienesSomos.jpg";
 .sectionHistoria
 {
     display:grid;
     grid-template-areas: 
-     "iddivHistoria idimagenHistoria"
-     "iddivHistoria idimagenHistoria"
-     "iddivHistoria idimagenHistoria";
+     "idimagenHistoria iddivHistoria"
+     "idimagenHistoria iddivHistoria"
+     "idimagenHistoria iddivHistoria";
     
      grid-template-columns: 50% auto;
     grid-template-rows: 100px 100px; 
@@ -264,6 +267,52 @@ $ruta_imgHistoria:"../img/pesca3.jpg";
 
 /*fin de quienes somos*/
 
+/*clientes*/
+.clientes
+{
+    
+
+    &__titulo
+    {
+        display: flex;
+        justify-content: center;
+        color: darkblue;
+    }
+
+    &__img
+    {
+        @media screen and (max-width: 320px) {
+       
+            display: flex;
+            flex-direction: column;
+            
+          
+        }
+
+        display: flex;  
+        flex-direction: row; 
+        justify-content: space-around;
+        width: 90%;
+        grid-gap: 30px;
+        margin:5%;
+        
+        
+        &__1
+        {
+            width: 100%;
+            transition: all 300ms;
+            position: relative;
+        }
+    }
+}
+
+.clientes__img__1:hover
+{
+    transform: scale(1.15);
+}
+/*fin de clientes*/
+
+/*footer*/
 .sectionFooter
 {
     background-color:whitesmoke;
@@ -272,14 +321,8 @@ $ruta_imgHistoria:"../img/pesca3.jpg";
     {
         text-align:left;
         display: inline-block;
-        &__h5
-        {
-            color: darkgrey;
-        }
-        &__p
-        {
-            color: grey;
-        }
+        
+        
     }
 
     &__mediosPago
@@ -290,22 +333,27 @@ $ruta_imgHistoria:"../img/pesca3.jpg";
         /* padding: 10px 45px;  */
         /*height: 60%;
         width: 30%;   */
-        &__h5
+        
+    }
+
+    &__h5
         {
             color: darkgrey;
         }
-
-        &__img
+    &__p
+        {
+            color: grey;
+        }
+    &__img
         {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
         }
-    }
    
 }
-
+/*fin de footer*/
 
 /*pagina servicios*/
 .tablaServicios
@@ -353,6 +401,16 @@ $ruta_imgHistoria:"../img/pesca3.jpg";
 }
 .prod_hijo
 {
+    
+    @media screen and (max-width: 320px) {
+       
+        display: flex;
+        flex-direction: column;
+        
+      
+    }
+    
+    
     display: flex;
     flex-direction: row;
     h5{
@@ -372,8 +430,18 @@ $ruta_imgHistoria:"../img/pesca3.jpg";
         width: auto !important;
         max-height: 600px !important;
         max-width: 600px !important;
+        transition: all 300ms !important;
         /*background-size: cover;*/
+        
+        
     }
+
+    
+}
+
+.prod_hijo__img:hover
+{
+    transform: scale(3.5) !important;
 }
 
 .descriProd
@@ -430,3 +498,4 @@ $ruta_imgHistoria:"../img/pesca3.jpg";
     background-color: #81ba50 !important;
 }
 /*fin de pagina contacto*/
+
