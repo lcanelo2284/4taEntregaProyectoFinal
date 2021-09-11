@@ -92,13 +92,48 @@ div h2 {
 }
 
 /*media querys*/
+/* @media screen and (max-width: 320px) {
+   .navegacion {
+     display: flex;
+     flex-direction: column;
+
+   }
+
+
+   @media screen and (max-width: 768px) {
+       .navegacion {
+         display: flex !important;
+         flex-direction: column !important;
+
+       }
+   } 
+   .quienSomVisMis
+   {
+       display: flex;
+       flex-direction: column;
+
+     }
+ } */
 @media screen and (max-width: 320px) {
   .navegacion {
     display: flex;
     flex-direction: column;
   }
-
-  .quienSomVisMis {
+}
+@media screen and (max-width: 768px) {
+  .navegacion {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sectionHeader {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .clientes {
     display: flex;
     flex-direction: column;
   }
@@ -116,15 +151,27 @@ div h2 {
 .quienSomVisMis {
   display: grid;
   grid-template-areas: "qS mM" "qS mV";
-  grid-template-columns: 40% auto;
-  grid-template-rows: 100px 100px;
-  grid-column-gap: 30px;
-  grid-row-gap: 20px;
+  /*grid-template-columns: 40% auto; 
+  grid-template-rows: 100px 100px; 
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;*/
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
 }
 @media screen and (max-width: 320px) {
   .quienSomVisMis {
     display: flex;
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .quienSomVisMis {
+    display: grid;
+    grid-template-areas: "qS" "mM" "mV";
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, auto);
   }
 }
 .quienSomVisMis__quienSom {
@@ -190,7 +237,7 @@ div h2 {
   padding-top: 20px;
   height: 500px;
   /*height:$height_imgH*6 ;*/
-  background-image: url("../img/qienesSomos.jpg");
+  background-image: url("../img/qienessomos-min_optimized.jpg");
   background-size: cover;
   grid-area: idimagenHistoria;
 }
@@ -210,7 +257,7 @@ div h2 {
   grid-gap: 30px;
   margin: 5%;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 768px) {
   .clientes__img {
     display: flex;
     flex-direction: column;

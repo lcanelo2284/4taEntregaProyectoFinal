@@ -119,20 +119,63 @@ div{
 }
 
 /*media querys*/
-@media screen and (max-width: 320px) {
+ /* @media screen and (max-width: 320px) {
     .navegacion {
       display: flex;
       flex-direction: column;
       
     }
 
+
+    @media screen and (max-width: 768px) {
+        .navegacion {
+          display: flex !important;
+          flex-direction: column !important;
+          
+        }
+    } 
     .quienSomVisMis
     {
         display: flex;
         flex-direction: column;
         
       }
-  }
+  } */
+
+  @media screen and (max-width: 320px) {
+    .navegacion {
+      display: flex;
+      flex-direction: column;
+      
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navegacion {
+      display: flex;
+      flex-direction: column;
+      
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .sectionHeader {
+      display: flex;
+      flex-direction: column;
+      
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .clientes {
+      display: flex;
+      flex-direction: column;
+      
+    }
+}
+
+
 /*fin de media query*/
 
 /*fotos*/
@@ -157,14 +200,30 @@ div{
         
       }
     
+       @media screen and (max-width: 768px) {
+       
+        display:grid;
+    grid-template-areas: 
+     "qS"
+     "mM"
+     "mV";
+     grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, auto);
+    } 
+
     display:grid;
     grid-template-areas: 
      "qS mM"
      "qS mV";
-     grid-template-columns: 40% auto;
+    
+     /*grid-template-columns: 40% auto; 
     grid-template-rows: 100px 100px; 
-    grid-column-gap: 30px;
-    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;*/
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
 
     &__quienSom
     {
@@ -224,7 +283,7 @@ $ruta_imgOrganigrama:"../img/organigrama.png";
 }
 
 
-$ruta_imgHistoria:"../img/qienesSomos.jpg";
+$ruta_imgHistoria:"../img/qienessomos-min_optimized.jpg";
 .sectionHistoria
 {
     @media screen and (max-width: 320px) {
@@ -288,13 +347,13 @@ $ruta_imgHistoria:"../img/qienesSomos.jpg";
 
     &__img
     {
-        @media screen and (max-width: 320px) {
+         @media screen and (max-width: 768px) {
        
             display: flex;
             flex-direction: column;
             
           
-        }
+        } 
 
         display: flex;  
         flex-direction: row; 
@@ -302,6 +361,7 @@ $ruta_imgHistoria:"../img/qienesSomos.jpg";
         width: 90%;
         grid-gap: 30px;
         margin:5%;
+        
         
         
         &__1
@@ -317,6 +377,8 @@ $ruta_imgHistoria:"../img/qienesSomos.jpg";
 {
     transform: scale(1.15);
 }
+
+
 /*fin de clientes*/
 
 /*footer*/
