@@ -29,6 +29,12 @@ div h2 {
   text-align: center;
 }
 
+.botonCentrado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* .sectionHeader_H3
 {
     position: relative;
@@ -212,18 +218,19 @@ div h2 {
 }
 
 .sectionHistoria {
+  /*  @media screen and (max-width: 320px) {
+
+       display: flex;
+       flex-direction: column;
+
+
+   } */
   display: grid;
   grid-template-areas: "idimagenHistoria iddivHistoria" "idimagenHistoria iddivHistoria" "idimagenHistoria iddivHistoria";
   grid-template-columns: 50% auto;
   grid-template-rows: 100px 100px;
   grid-column-gap: 10px;
   text-align: justify;
-}
-@media screen and (max-width: 320px) {
-  .sectionHistoria {
-    display: flex;
-    flex-direction: column;
-  }
 }
 .sectionHistoria__historia {
   grid-area: iddivHistoria;
@@ -236,10 +243,53 @@ div h2 {
 .sectionHistoria__imagenHistoria {
   padding-top: 20px;
   height: 500px;
-  /*height:$height_imgH*6 ;*/
-  background-image: url("../img/qienessomos-min_optimized.jpg");
   background-size: cover;
+  width: 100%;
   grid-area: idimagenHistoria;
+}
+
+@media screen and (max-width: 768px) {
+  .sectionHistoria {
+    display: grid;
+    grid-template-areas: "idimagenHistoria" "iddivHistoria";
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(1, auto);
+  }
+
+  .sectionHistoria__imagenHistoria {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+  }
+}
+.boldAzul {
+  color: darkblue;
+}
+
+.boldVerde {
+  color: #81ba50;
+}
+
+.textJustificy {
+  text-align: justify;
+}
+
+.iconvalpad {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.iconVal {
+  font-size: 3em;
+  width: auto;
+  height: 1.5em;
+}
+
+.iconVal:hover {
+  transform: scale(1.15);
 }
 
 /*fin de quienes somos*/
@@ -264,12 +314,15 @@ div h2 {
   }
 }
 .clientes__img__1 {
-  width: 100%;
-  transition: all 300ms;
+  width: 90%;
   position: relative;
 }
 
 .clientes__img__1:hover {
+  transform: scale(1.15);
+}
+
+.imgHover:hover {
   transform: scale(1.15);
 }
 
@@ -343,6 +396,12 @@ div h2 {
   flex-direction: row;
 }
 @media screen and (max-width: 320px) {
+  .prod_hijo {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
   .prod_hijo {
     display: flex;
     flex-direction: column;

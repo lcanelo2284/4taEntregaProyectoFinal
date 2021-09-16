@@ -38,6 +38,13 @@ div{
 .telH3{
     text-align: center;
 }
+
+.botonCentrado
+{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* .sectionHeader_H3
 {
     position: relative;
@@ -286,13 +293,16 @@ $ruta_imgOrganigrama:"../img/organigrama.png";
 $ruta_imgHistoria:"../img/qienessomos-min_optimized.jpg";
 .sectionHistoria
 {
-    @media screen and (max-width: 320px) {
+   /*  @media screen and (max-width: 320px) {
        
         display: flex;
         flex-direction: column;
         
       
-    }
+    } */
+
+
+
     display:grid;
     grid-template-areas: 
      "idimagenHistoria iddivHistoria"
@@ -322,14 +332,80 @@ $ruta_imgHistoria:"../img/qienessomos-min_optimized.jpg";
     {
         padding-top: 20px;
         height: 500px;
-        /*height:$height_imgH*6 ;*/
-        background-image: url($ruta_imgHistoria);
+        
+        
+        //background-image: url($ruta_imgHistoria);
         background-size: cover;
+        width: 100%;
+        
 
         grid-area: idimagenHistoria;
     }
 }
 
+
+ @media screen and (max-width: 768px) {
+     .sectionHistoria{
+        display:grid;
+    grid-template-areas: 
+     "idimagenHistoria"
+     "iddivHistoria";
+     //grid-gap: 10px;
+     
+
+     grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(1, auto);
+     }  
+    
+    
+    .sectionHistoria__imagenHistoria
+    {
+        display: flex;
+        flex-direction: column;
+    
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 500px;
+    
+        
+        
+        
+        
+    }
+      
+    }
+
+    .boldAzul
+    {
+        color: darkblue;
+    }
+    
+    .boldVerde
+    {
+        color:#81ba50;
+    }
+
+    .textJustificy
+    {
+        text-align: justify;
+    }
+
+    .iconvalpad {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .iconVal {
+        font-size: 3em;
+        width: auto;
+        height: 1.5em;
+    }
+
+    .iconVal:hover
+{
+    transform: scale(1.15);
+}
 
 /*fin de quienes somos*/
 
@@ -366,14 +442,19 @@ $ruta_imgHistoria:"../img/qienessomos-min_optimized.jpg";
         
         &__1
         {
-            width: 100%;
-            transition: all 300ms;
+            width: 90%;
+            //transition: all 300ms;
             position: relative;
         }
     }
 }
 
 .clientes__img__1:hover
+{
+    transform: scale(1.15);
+}
+
+.imgHover:hover
 {
     transform: scale(1.15);
 }
@@ -480,6 +561,14 @@ $ruta_imgHistoria:"../img/qienessomos-min_optimized.jpg";
     }
     
     
+    @media screen and (max-width: 768px) {
+       
+        display: flex;
+        flex-direction: column;
+        
+      
+    }
+
     display: flex;
     flex-direction: row;
     h5{
